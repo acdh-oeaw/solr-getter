@@ -46,7 +46,7 @@
           to {left: 100%;}
       }
     </style>
-    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
   </head>
   <body>
     <input
@@ -69,13 +69,13 @@
     <div id="output"></div>
   </body>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="http://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" charset="utf-8"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" charset="utf-8"></script>
   <script src="solr.js"></script>
   <script>
    $( document ).ready(() => {
        $('#send').click(() => {
          getSolr({
-           solrEndpoint: 'https://fedora.hephaistos.arz.oeaw.ac.at/solr/arche/query',
+           solrEndpoint: 'https://arche.acdh.oeaw.ac.at/solr/arche/query',
            pageSize: 25,
            input: $("#query").val(),
            columns: [{ 'Type': 'content_type' }, { 'column label': 'solr_object_key' }, { 'Title': 'meta_title' }, { 'highlight': 'highlight_with_link' }],
